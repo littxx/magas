@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magazine Luiza</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: "Noto Sans", sans-serif;
+      font-family: "Roboto", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+
+    .logo {
+      font-family: 'Nunito', sans-serif;
+    }
+
+
+    footer {
+      background-color: #0086ff;
+      color: white;
+
+      text-align: center;
+    }
+
+    header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      /* Define o layout em coluna */
+      align-items: center;
+      /* Centraliza horizontalmente */
+      background-color: #0086ff;
+      /* Cor do fundo do cabeçalho */
+      color: white;
+      padding-right: 2px;
+      /* Espaçamento interno */
+    }
+
+    .blue-magalu {
+      padding-left: 8px;
+      font-size: 17px;
+      font-weight: 500;
+      color: #bebebe;
+    }
+
+
+    .magalu-azul {
+      margin-left: -20px;
+      margin-top: 10px;
+      /* Ajusta a margem esquerda */
+      padding-top: 10px;
+      /* Reduz o preenchimento superior */
+      padding-bottom: 0;
+      /* Reduz o preenchimento inferior */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10px;
+    }
+
+    .header-top,
+    .header-bottom {
+      padding-top: 1px;
+      width: 100%;
+      /* Ocupa toda a largura do cabeçalho */
+      display: flex;
+      justify-content: space-between;
+      /* Espaçamento entre os elementos */
+      align-items: center;
+      /* Alinhamento vertical central */
+      padding: 5px 0;
+      /* Espaçamento interno adicional para separar top e bottom */
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    .menu input[type="search"] {
+      flex-grow: 1;
+      margin: 0 5px;
+    }
+
+    .titulo {
+      font-family: 'Nunito', sans-serif;
+      font-size: 25px;
+      font-weight: 800;
+      font
+    }
+
+    .propaganda,
+    .logo,
+    .fichaTecnica,
+    .informations {
+      margin-bottom: 10px;
+    }
+
+    .logo h1,
+    .product-details h2,
+    .product-details p,
+    .product-details h3 {
+      margin: 5px 0;
+    }
+
+    section {
+      background-color: white;
+      padding: 15px;
+      margin: 20px 0;
+    }
+
+    .comentarios ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .comentarios li {
+      border-top: 1px solid #eee;
+      padding: 10px 0;
+    }
+
+
+    .floating-div {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      color: red;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 600px;
+      background-color: white;
+      border-top: 1px solid #007bff;
+      display: none;
+      /* Inicialmente oculta */
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      /* Centraliza os itens horizontalmente */
+      align-items: center;
+      /* Centraliza os itens verticalmente */
+    }
+
+    .floating-div p,
+    .floating-div button {
+      flex: 1;
+      /* Divide o espaço igualmente */
+      text-align: center;
+      padding: 10px;
+      margin: 0;
+    }
+
+    .inputGrande {
+      color: antiquewhite;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      margin: auto;
+      width: 97%;
+      height: 30px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer div {
+
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .arco-iris {
+      margin-top: 10px;
+      padding-top: 2px;
+      width: 100%;
+      height: 5px;
+      /* Altura da linha do arco-íris */
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    }
+
+
+
+    .header-top h1,
+    .header-top button {
+      margin-right: 2px;
+      /* Adiciona espaço entre o ícone e o texto do botão */
+      color: white;/
+    }
+
+    .header-top button i {
+      font-size: 16px;
+      /* Ajuste o tamanho conforme necessário */
+      color: white;
+      background-color: #0086ff;
+      /* Ajuste a cor conforme necessário */
+      /* Outras propriedades de estilo, se necessário */
+    }
+
+    .ofertas {
+      display: flex;
+      justify-items: flex-start;
+      justify-content: flex-start;
+      align-items: center;
+      margin-left: -240px;
+    }
+
+    .ofertas p {
+      margin-left: -8px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .carousel {
+      position: relative;
+      max-width: 600px;
+      /* Ajuste conforme necessário */
+      margin: auto;
+      margin-top: -20px;
+    }
+
+    .carousel img {
+      width: 100%;
+      display: none;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    .carousel-control {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+    }
+
+    .carousel-control.prev {
+      left: 0;
+    }
+
+    .carousel-control.next {
+      right: 0;
+    }
+
+    @media (max-width: 768px) {
+
+      .header-top,
+      .header-bottom {
+
+        padding: 1px;
+        text-align: center;
+      }
+
+      .header-top h1 {
+        margin-bottom: 0 5px;
+      }
+
+      .header-top button {
+        background-color: #0086ff;
+        /* Cor de fundo do botão */
+        color: white;
+        /* Cor do ícone */
+        border: none;
+        /* Remove a borda do botão, se houver */
+        padding: 10px;
+        /* Espaçamento interno para o botão */
+      }
+
+      /* Estilo específico para os ícones do Font Awesome */
+      .header-top button i {
+        color: white;
+        /* Cor do ícone */
+      }
+
+      .menu input[type="search"] {
+        flex-grow: 0;
+        width: 90%;
+        /* Ajusta a largura do campo de pesquisa */
+      }
+
+      .floating-div {
+        width: 100%;
+        max-width: none;
+      }
+
+      .carousel-container {
+        /* Ajustes para o carrossel em telas menores */
+      }
+
+      /* Outros ajustes de estilo para dispositivos móveis */
+    }
+
+    /* Media Query para telas menores que 480px (celulares) */
+    @media (max-width: 480px) {
+      /* Ajustes específicos para telas de celulares */
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <header>
+      <div class="header-top">
+        <button><i class="fas fa-bars"></i></button>
+        <img src="src/img/maga.png" width="110px" height="auto" alt="magalu">
+        <button><i class="fas fa-user"></i></button>
+      </div>
+      <div class="header-bottom">
+        <input type="search" name="busca" placeholder="Busca no Magalu" class="inputGrande" />
+      </div>
+      <div class="arco-iris">
+
+      </div>
+      <div class="ofertas">
+        <button style=" background-color: #0086ff;">
+          <i class="fas fa-map-marker-alt"></i></button>
+        <p>
+          Ver ofertas para minha região
+        </p>
+      </div>
+    </header>
+    <div class="magalu-azul">
+      <img src="src/img/azul.png" width="72px" alt="Magalu">
+      <p class="blue-magalu"> &gt Celulares e Smartphones &gt Iphone &gt Iphone 11</p>
+    </div>
+
+    <section>
+      <section>
+        <div id="carouselContainer" class="carousel">
+          <img src="src/img/Iphone.jpg" alt="Iphone 11 Apple 64GB" class="active">
+          <!-- Adicione mais imagens aqui -->
+          <a class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</a>
+          <a class="carousel-control next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+        <img style="margin-left: -20px; padding-top: 10px;" src="src/img/magalu-indica.png" width="160px"
+          alt="magalu indica">
+        <h2>Iphone 11 Apple 64GB preto 6,1"12MB IOS</h2>
+        <p>.....</p>
+        <h3>
+          armazenamento interno (17735) <button><i></i></button>
+        </h3>
+        <p>R$ 4.739,00</p>
+        <p>R$ 2.699,00 <span>no pix</span></p>
+        <p>ou R$2.841,05 em 10x de R$ 284,11 sem juros</p>
+        <p>Vendido e entregue por <span>Magalu</span></p>
+        <div>
+          <h2>Cartão de credito</h2>
+          <p>sem juros</p>
+        </div>
+        <div>
+          <h2>Calcular frete</h2>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div>
+            <h3>
+              Magalu Indica
+              <span>é entrega rápida, menor preço e melhores lojistas pra
+                voce</span>
+            </h3>
+          </div>
+          <div>
+            Magalu garante <span>a sua compra, do pedido a entrega</span>
+          </div>
+          <div>
+            Devolução Gratuita
+            <span>em até 7 dias depois de receber o produto</span>
+          </div>
+        </div>
+        <div>
+          <button>Comprar Agora</button>
+          <button>Adicionar a Sacola</button>
+        </div>
+      </section>
+      <section class="comentarios">
+        <div class="informations">
+          <h2>Informações do produto</h2>
+          <p>
+            Grave vídeos 4K, faça belos retratos e capture paisagens inteiras
+            com o novo sistema de câmera dupla. Tire fotos incríveis com pouca
+            luz usando o modo Noite. Veja cores fiéis em fotos, vídeos e jogos
+            na tela Liquid Retina de 6,1 polegadas***. Leve o desempenho sem
+            precedentes do chip A13 Bionic para seus games, realidade
+            aumentada e fotografia. Faça muito e recarregue pouco com a
+            bateria para o dia todo**. E conte com resistência à água de até
+            dois metros por até 30 minutos*.Avisos legais:*O iPhone 11 é
+            resistente a respingos, água e poeira e foi testado em condições
+            controladas em laboratório, classificado como IP68 segundo a norma
+            IEC 60529 (profundidade máxima de até dois metros por até 30
+            minutos). A resistência a respingos, água e poeira não é uma
+            condição permanente e pode diminuir com o tempo. Não tente
+            recarregar um iPhone molhado. Veja instruções no Manual do Usuário
+            para limpeza e secagem. Danos decorrentes de contato com líquidos
+            não estão incluídos na garantia.**A duração da bateria varia de
+            acordo com o uso e a configuração. Consulte o site do fabricante
+            para obter mais informações.***A tela te
+          </p>
+        </div>
+        <div class="fichaTecnica">
+          <p>Ficha Técnica</p>
+        </div>
+        <div>
+          <h2>Avaliação dos clientes</h2>
+          <h1>4.8 <i></i></h1>
+          <p>17735 avaliações</p>
+          <p>5671 comentários</p>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <i></i>
+              <p>
+                Nilton <span><i class="fa-regular fa-star"></i></span>
+              </p>
+              <p>armazenamento interno: 64GB | Cor: Preto</p>
+              <p>
+                O aparelho tem ótimo desempenho e grande performance da
+                bateria.
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <i></i>
+              <p>
+                Ana <span><i class="fa-regular fa-star"></i></span>
+              </p>
+              <p>armazenamento interno: 128GB | Cor: Preto</p>
+              <p>Muito bom sem palavras iPhone não tem nem o que falar</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <i></i>
+              <p>
+                Elton <span><i class="fa-regular fa-star"></i></span>
+              </p>
+              <p>armazenamento interno: 64GB | Cor: Preto</p>
+              <p>
+                atendimento e rapidez é a sua marca sempre visando em primeiro
+                lugar o seu cliente
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <i></i>
+              <p>
+                Marcos<span><i class="fa-regular fa-star"></i></span>
+              </p>
+              <p>armazenamento interno: 64GB | Cor: Preto</p>
+              <p>Produto de excelente qualidade, custo benefício razoável!</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <i></i>
+              <p>
+                Luciano <span><i class="fa-regular fa-star"></i></span>
+              </p>
+              <p>armazenamento interno: 64GB | Cor: Preto</p>
+              <p>
+                é complicado um produto caro desses chegar e o cliente não
+                usar e a loja não s envolver é direto com o fabricante não
+                gostei
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <i></i>
+              <p>
+                Joel <span><i class="fa-regular fa-star"></i></span>
+              </p>
+              <p>armazenamento interno: 128GB | Cor: Preto</p>
+              <p>
+                ótimo só deveria ser mais em conta mais as funções são ótimas
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <i></i>
+              <p>
+                Reginaldo <span><i class="fa-regular fa-star"></i></span>
+              </p>
+              <p>armazenamento interno: 128GB | Cor: Preto</p>
+              <p>
+                Celular de ótima qualidade. A bateria poderia durar mais. Mas
+                em resumo, recomendo 😉
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <i></i>
+              <p>
+                Cezar <span><i class="fa-regular fa-star"></i></span>
+              </p>
+              <p>armazenamento interno: 64GB | Cor: Preto</p>
+              <p>
+                Primeiro iPhone que compro ainda estou me adaptando ao novo
+                sistema. Fora isso aparelho bem acabado e percebível a
+                qualidade. O único defeito é não vim um carregador.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button>ver mais avaliações</button>
+        </div>
+      </section>
+    </section>
+    <footer> <!-- DIV flutuante em testes
+      <div class="floating-div">
+        <p>R$ 3.999,00 no Pix
+          ou 10x de R$ 444,33 no cartão</p>
+        <button>Adicionar a Sacola</button>
+      </div>
+     -->
+
+  </div>
+  <div style="background-color: #0086ff; justify-content: center; text-align: center;">
+    <p>
+      Preços e condições de pagamento exclusivos para compras via
+      internet, podendo variar nas lojas físicas. Ofertas válidas na
+      compra de até 5 peças de cada produto por cliente, até o término dos
+      nossos estoques para internet. Caso os produtos apresentem
+      divergências de valores, o preço válido é o da sacola de compras.
+      Vendas sujeitas a análise e confirmação de dados.
+    </p>
+    <p>Politica de privacidade</p>
+    <p>
+      Magazine Luiza S/A - CNPJ: 47.960.950/1088-36 Rua Arnulfo de Lima,
+      2385 - Vila Santa Cruz
+    </p>
+  </div>
+  </footer>
+  </div>
+  <script>
+    window.onscroll = function () {
+      var y = window.scrollY;
+      var floatingDiv = document.querySelector(".floating-div");
+
+      if (y > 400) {
+        // Ajuste este valor conforme necessário
+        floatingDiv.style.display = "block";
+      } else {
+        floatingDiv.style.display = "none";
+      }
+    };
+    var slideIndex = 0;
+    showSlides(slideIndex);
+
+    function moveSlide(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.querySelectorAll(".carousel img");
+      if (n >= slides.length) slideIndex = 0;
+      if (n < 0) slideIndex = slides.length - 1;
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex].style.display = "block";
+    }
+
+  </script>
+</body>
+
+</html>
