@@ -221,6 +221,10 @@
       /* Ajuste a cor conforme necessário */
       /* Outras propriedades de estilo, se necessário */
     }
+    .mais-vendidos{
+      padding-top: 0.900rem;
+      float: right;
+    }
 
     .ofertas {
       display: flex;
@@ -299,8 +303,22 @@
 
 #heartButton {
     margin-left: auto; 
-    background-color: white;/* Empurra o botão para a direita */
+    background-color: white;
+    color: #adadad;
+    
+    
+    
+
 }
+#heartButton i {
+   font-size: 1.5rem;
+   margin-right: -2rem;
+    
+    
+    
+
+}
+
 
 .star-rating i, .star-rating p {
   color: #74787c;
@@ -398,7 +416,7 @@
       </div>
     </header>
     <div class="magalu-azul">
-      <img src="src/img/azul.png" width="67px" alt="Magalu">
+      <img style="display: flex; align-items: center; margin-top: 6px;" src="src/img/azul.png" width="67px" alt="Magalu">
       <p class="blue-magalu"> &gt Celulares e Smartphones &gt Iphone &gt Iphone 11</p>
     </div>
 
@@ -429,10 +447,11 @@
         
         </div>
 
-        <img src="/src/img/mais-vendido.webp" alt="magalu indica">
+        <img class="mais-vendidos" src="/src/img/mais-vendido.webp" alt="magalu indica">
         <p class="text-sublimado">R$ 4.739,00</p>
-        <p>R$ 2.699,00 <span>no pix</span></p>
-        <p>(5% de desconto)</p>
+        <p class="preco-real">R$ 2.699,00 <span>no pix</span></p>
+        <p class="desconto-pix">(5% de desconto)</p>
+        <p class="desconto-pix">vendido e entregue por <img src="/src/img/azul.png" width="70px" alt="magalu"></p>
 
        
       </section>
