@@ -18,6 +18,9 @@
       background-color: #f4f4f4;
     }
 
+    .text-sublimado {
+      text-decoration: line-through;
+    }
 
     .logo {
       font-family: 'Nunito', sans-serif;
@@ -54,7 +57,7 @@
 
 
     .magalu-azul {
-      margin-left: -2px;
+      margin-left: 0.400rem;
       margin-top: 10px;
       /* Ajusta a margem esquerda */
       padding-top: 10px;
@@ -93,6 +96,7 @@
       margin: 0 5px;
     }
 
+   
     .titulo {
       font-family: 'Nunito', sans-serif;
       font-size: 25px;
@@ -100,6 +104,9 @@
       font
     }
 
+    .titulo-grande{
+
+    }
     .propaganda,
     .logo,
     .fichaTecnica,
@@ -220,7 +227,14 @@
       justify-items: flex-start;
       justify-content: flex-start;
       align-items: center;
-      margin-left: -200px;
+      margin-left: -10rem;
+    }
+
+    .text-iphone {
+      font-size: 1.205rem;
+      color:#74787c ;
+      width: 99%;
+      margin-left: -1rem;
     }
 
     .ofertas p {
@@ -266,6 +280,44 @@
 
     .carousel-control.next {
       right: 0;
+    }
+    .star-rating {
+      margin-left: -1rem;
+    display: flex; /* Isso alinha todos os itens filhos horizontalmente */
+    align-items: center; /* Isso centraliza os itens verticalmente */
+    gap: 5px; /* Isso adiciona um pequeno espaço entre os itens */
+}
+.star-rating {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; /* Espaçamento entre os itens */
+}
+
+.star-rating i, .star-rating p, .star-rating span {
+    margin: 0 5px; /* Espaçamento entre estrelas, texto e ícones */
+}
+
+#heartButton {
+    margin-left: auto; 
+    background-color: white;/* Empurra o botão para a direita */
+}
+
+.star-rating i, .star-rating p {
+  color: #74787c;
+ font-size: medium;
+ background-color: white;
+    margin: 0; /* Remove as margens padrão */
+}
+
+.star-rating span {
+    display: inline; /* Mantém os elementos na mesma linha */
+    margin-right: 5px; /* Adiciona um pequeno espaço entre os elementos */
+}
+    .star-rating .fa-star,
+    .star-rating .fa-star-half-alt,
+    .star-rating .fa-star-o {
+      color: gold;
+
     }
 
     @media (max-width: 768px) {
@@ -360,22 +412,29 @@
         </div>
         <img style="margin-left: -20px; padding-top: 10px;" src="src/img/magalu-indica.png" width="160px"
           alt="magalu indica">
-        <h2>Iphone 11 Apple 64GB preto 6,1"12MB IOS</h2>
-        <p>.....</p>
-        <h3>
-          armazenamento interno (17735) <button><i></i></button>
-        </h3>
-        <p>R$ 4.739,00</p>
+        <h2 class="text-iphone">Iphone 11 Apple 64GB preto 6,1"12MB IOS</h2>
+        <div class="estrela">
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>4.8</span> <span>(17735)</span>
+            <i class="fas fa-share-alt"></i>
+            <button id="heartButton">
+                <i class="far fa-heart"></i>
+            </button>
+        </div>
+        
+        </div>
+
+        <img src="/src/img/mais-vendido.webp" alt="magalu indica">
+        <p class="text-sublimado">R$ 4.739,00</p>
         <p>R$ 2.699,00 <span>no pix</span></p>
-        <p>ou R$2.841,05 em 10x de R$ 284,11 sem juros</p>
-        <p>Vendido e entregue por <span>Magalu</span></p>
-        <div>
-          <h2>Cartão de credito</h2>
-          <p>sem juros</p>
-        </div>
-        <div>
-          <h2>Calcular frete</h2>
-        </div>
+        <p>(5% de desconto)</p>
+
+       
       </section>
       <section>
         <div>
